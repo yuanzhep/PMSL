@@ -1,2 +1,2 @@
 # PMSL
-research proj
+research proj (Privacy-Enhanced Multimodal Split Learning)
