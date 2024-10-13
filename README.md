@@ -1,5 +1,5 @@
 # PMSL
-research proj. You are also welcome to share your ideas by opening an issue or dropping me an email at [pengy1@ufl.edu](mailto:pengy1@ufl.edu). 
+Research project in progress. You are also welcome to share your ideas by opening an issue or dropping me an email at [pengy1@ufl.edu](mailto:pengy1@ufl.edu). 
 
 Dataset:
 (1) IEMOCAP (modality: audio, text, and video). You can access the IEMOCAP data [here](https://sail.usc.edu/iemocap/). Utility label: Positive/Negative. Privacy label: Male/Female. 
