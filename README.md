@@ -10,4 +10,4 @@ Dataset:
 
 <img src="figs/celeba.png" width="500">
 
-(3) LFW
+(3) LFW. You can access the LFW data [here](https://vis-www.cs.umass.edu/lfw/)
