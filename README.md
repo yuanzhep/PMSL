@@ -1,5 +1,5 @@
 # PMSL
-research proj (Privacy-Enhanced Multimodal Split Learning)
+research proj (PMSL)
 
 Dataset:
 (1) IEMOCAP (audio, text, and video)
