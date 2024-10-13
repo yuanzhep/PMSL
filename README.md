@@ -12,4 +12,4 @@ Dataset:
 
 (3) LFW. You can access the LFW data [here](https://vis-www.cs.umass.edu/lfw/)
 
-<img src="figs/memory.png" width="300">
+<img src="figs/memory.png" width="500">
