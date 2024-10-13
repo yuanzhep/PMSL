@@ -6,7 +6,7 @@ Dataset:
 
 <img src="figs/IEMOCAP.png" width="500">
 
-(2) CelebA (16x32, 16x32). You can access the CelebA data [here]([https://sail.usc.edu/iemocap/](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html).
+(2) CelebA (16x32, 16x32). You can access the CelebA data [here](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html/)
 
 <img src="figs/celeba.png" width="500">
 
