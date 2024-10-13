@@ -13,7 +13,7 @@ from torch.utils.data import DataLoader
 from torch.optim import Adam
 from tqdm import tqdm
 from dataset.general import get_dataset
-from models.general import get_classification_model, get_obfuscator_model
+from models.general import get_classification_model, get_protector_model
 from utils.logger import get_logger
 from utils.general import get_result_path, args2json, AverageMeter
 from utils.metrics import get_metrics
@@ -34,9 +34,9 @@ def parse_arguments():
     parser.add_argument("--task-loss")
     parser.add_argument("--task-lr", type=float, default=1e-3)
     parser.add_argument('--task-metrics', type=str, nargs="+")
-    parser.add_argument("--obfuscator-arch")
-    parser.add_argument("--obfuscator-lr", type=float, default=1e-3)
-    parser.add_argument('--obfuscator-weight')
+    parser.add_argument("--protector-arch")
+    parser.add_argument("--protector-lr", type=float, default=1e-3)
+    parser.add_argument('--protector-weight')
     parser.add_argument('--std', type=float)
 
     args = parser.parse_args()
@@ -86,11 +86,11 @@ def main():
 
     task_net = get_classification_model(
         args.task_arch, num_classes=task_nc).to(device)
-    obfuscator_net = get_obfuscator_model(
-        args.obfuscator_arch, std=args.std).to(device)
-    obfuscator_net.load_state_dict(torch.load(args.obfuscator_weight)[
-                                   'state_dict_obfuscator'])
-    obfuscator_net.eval()
+    protector_net = get_protector_model(
+        args.protector_arch, std=args.std).to(device)
+    protector_net.load_state_dict(torch.load(args.protector_weight)[
+                                   'state_dict_protector'])
+    protector_net.eval()
 
     task_loss_fn = get_loss_fn(args.task_loss)
 
@@ -115,7 +115,7 @@ def main():
             y = y.to(device)
 
             with torch.no_grad():
-                x = obfuscator_net(x)
+                x = protector_net(x)
 
             pred = task_net(x)
             loss = task_loss_fn(pred, y)
@@ -138,7 +138,7 @@ def main():
                  device=device,
                  task_net=task_net,
                  metrics=metrics_test,
-                 obfuscator_net=obfuscator_net,
+                 protector_net=protector_net,
                  is_task=True,
                  label_divider=label_divider)
         logger.info(('+++Test+++ Epoch: {} Metrics: {metrics.avg}'
