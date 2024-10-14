@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python3
 
-# yz, 1008/2024
+# yz, 1008/2024, 1011/2024
 # Divide face accordance CelebA Attr type.
 
 from __future__ import absolute_import
@@ -12,7 +12,7 @@ import shutil
 import os
 
 output_path = "/home/yusen/yz/PMSL/datasets/CelebA/"
-image_path = "/home/yusen/yz/PMSL/datasets/CelebA/img_align_celeba_160x160"
+image_path = "/home/yusen/yz/PMSL/datasets/CelebA/img_align_celeba"
 CelebA_Attr_file = "/home/yusen/yz/PMSL/datasets/CelebA/list_attr_celeba.txt"
 Attr_type = 16 # Eyeglasses
 
