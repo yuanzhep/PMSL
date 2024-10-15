@@ -6,7 +6,7 @@ Dataset:
 
 <img src="figs/IEMOCAP.png" width="500">
 
-(2) CelebA (resize and split by 16x32). You can access the CelebA data [here](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) Utility label: Smiling or not. Privacy label: Male or not. 
+(2) CelebA (resize and split by 16x32). You can access the CelebA data [here](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) 
 
 <img src="figs/celeba.png" width="500">
 
