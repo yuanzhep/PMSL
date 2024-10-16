@@ -10,7 +10,7 @@ CELEBA_CLASS_NAMES = ['5_o_Clock_Shadow', 'Arched_Eyebrows', 'Attractive',
                       'Wavy_Hair', 'Wearing_Earrings', 'Wearing_Hat', 'Wearing_Lipstick', 'Wearing_Necklace', 'Wearing_Necktie', 'Young', '']
 
 DOWNLOAD = False
-DATA_ROOT = 'FILL_THIS'
+DATA_ROOT = '/home/yusen/yz/PMSL/datasets/'
 
 train_transform = transforms.Compose([
     transforms.CenterCrop((178, 178)),
