@@ -1,4 +1,5 @@
 # yz, 1015/2024
+# privacy task: male
 
 def get_dataset(dataset_name):
     def label_divider(y):
